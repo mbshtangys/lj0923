@@ -220,7 +220,7 @@ Engine.prototype.CreateCanvas = function () {
     this.BackItemContainer.setAttribute('width', this.BackGroundSize.X * this.ItemAreaPer);
     this.BackItemContainer.setAttribute('height', this.BackGroundSize.Y * this.ItemAreaPer);
     var padper = (1 - this.ItemAreaPer) / 2;
-    this.BackItemContainer.setAttribute('style', 'border: 1px solid green;position: absolute;left:' + (padper * 100) + '%;top:' + (padper * 100) + '%;color:red;font-weight:600;');
+    this.BackItemContainer.setAttribute('style', 'position: absolute;left:' + (padper * 100) + '%;top:' + (padper * 100) + '%;color:red;font-weight:600;');
     this.BackItemContainer.setAttribute('onclick', 'javascript:window.llhengine.ClickItem(event);');
     this.BackItemContainer.innerHTML = "您的浏览器不支持Html5,无法进行游戏";
     this.GameBackGrid.appendChild(this.BackItemContainer);
@@ -256,14 +256,14 @@ Engine.prototype.InitEngine = function () {
     if (!this.ScroeArea) {
         this.ScroeArea = document.createElement('span');
         this.ScroeArea.setAttribute('width', '40px');
-        this.ScroeArea.setAttribute('style', 'border: 1px solid red;position: absolute;left:0px;top:0px;height:22px;width:80px;color:blue; font-weight:600;background-color:Gray;');
+        this.ScroeArea.setAttribute('style', 'position: absolute;left:0px;top:0px;height:22px;width:80px;color:blue; font-weight:600;background-color:Gray;');
         this.GameBackGrid.appendChild(this.ScroeArea);
     }
     //计分牌
     if (!this.LevelArea) {
         this.LevelArea = document.createElement('span');
         this.LevelArea.setAttribute('width', '40px');
-        this.LevelArea.setAttribute('style', 'border: 1px solid red;position: absolute;left:' + (this.BackGroundSize.X - 80) + 'px;top:0px;height:22px;width:80px;color:blue; font-weight:600;background-color:Gray;');
+        this.LevelArea.setAttribute('style', 'position: absolute;left:' + (this.BackGroundSize.X - 80) + 'px;top:0px;height:22px;width:80px;color:blue; font-weight:600;background-color:Gray;');
         this.GameBackGrid.appendChild(this.LevelArea);
     }
 }
